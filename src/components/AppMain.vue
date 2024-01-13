@@ -6,17 +6,30 @@ export default {
         return{
             store
         }
-    }
+    },
+    methods: {
+        getFlag(flag) {
+            if (flag == "en") {
+                return "fi fi-gb"
+            }
+            if (flag == "it") {
+                return "fi fi-it"
+            }
+        }
+    },
 }
 </script>
 <template lang="">
    <main>
     <div class="container">
         <div class="row">
-            <div class="col-2 d-flex align-items-center text-center flex-column gap-2 mb-3" v-for="film, index in store.movies" :key="index">
+            <div class="col-12 justify-content-center mb-3">
+                <h2 class="text-center" >FILM</h2>
+            </div>
+            <div class="col-3 d-flex align-items-center text-center flex-column gap-2 mb-3" v-for="film, index in store.movies" :key="index">
                 <h2> TITLE: {{ film.title }} </h2>
                 <h3> ORIGINAL: {{ film.original_title }} </h3>
-                <p> LANGUAGE: {{ film.original_language}} </p>
+                <span :class="getFlag(film.original_language)"></span>
                 <p> VOTE: {{ film.vote_average }} </p>
             </div>
         </div>
