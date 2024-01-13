@@ -31,7 +31,7 @@ export default {
     header {
     background-color: black;
     width: 100%;
-    margin-bottom: 25px;
+    height: 75px;
     #search {
         border-radius: 20px;
         border: 1px solid white;
