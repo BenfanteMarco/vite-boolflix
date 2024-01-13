@@ -16,11 +16,16 @@ export default {
   methods: {
     getMovies(){
       let searchMovies = store.movieApi;
+      let searchSeries = store.seriesApi;
       if(store.search !== ''){
         searchMovies += `&query=${store.search}`
+        searchSeries += `&query=${store.search}`
       }
       axios.get(searchMovies).then((response) => {
         this.store.movies = response.data.results
+      });
+      axios.get(searchSeries).then((response) => {
+        this.store.series = response.data.results
       });
     }
   }

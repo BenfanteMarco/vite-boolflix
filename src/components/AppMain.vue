@@ -34,6 +34,19 @@ export default {
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 justify-content-center mb-3">
+                <h2 class="text-center" >SERIES</h2>
+            </div>
+            <div class="col-3 d-flex align-items-center text-center flex-column gap-2 mb-3" v-for="show, index in store.series" :key="index">
+                <h2> TITLE: {{ show.name }} </h2>
+                <h3> ORIGINAL: {{ show.first_air_date }} </h3>
+                <span :class="getFlag(show.original_language)"></span>
+                <p> VOTE: {{ show.vote_average }} </p>
+            </div>
+        </div>
+    </div>
    </main>
 </template>
 <style lang="scss" scoped>
