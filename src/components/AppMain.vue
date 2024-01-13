@@ -66,6 +66,15 @@ export default {
     height: calc(100vh - 75px);
     overflow: auto;
     background-color: rgb(32, 32, 32);
+        h1{
+            color: white;
+        }
+        h2{
+            color: white;
+        }
+        h3{
+            color: white;
+        }
     }
 
 </style>
