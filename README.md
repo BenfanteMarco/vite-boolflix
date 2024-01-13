@@ -1,4 +1,4 @@
-Milestone 0:
+Milestone 0: DONE
 Progettare la struttura del global state sulla linea degli esercizi svolti nei giorni precedenti.
 
 Milestone 1:
