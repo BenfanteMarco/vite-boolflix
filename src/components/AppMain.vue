@@ -1,18 +1,17 @@
 <script>
 export default {
-    name: 'AppHeader',
+    name: 'AppMain',
     data(){
         return{
 
         }
     }
-            
 }
 </script>
 <template lang="">
-    <header>
-
-    </header>
+    <div>
+        
+    </div>
 </template>
 <style lang="scss" scoped>
     @use '../styles/generals.scss';
