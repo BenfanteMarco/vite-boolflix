@@ -14,7 +14,7 @@ export default {
     }
   },
   methods: {
-    getMovies(){
+    getMovies(vote){
       let searchMovies = store.movieApi;
       let searchSeries = store.seriesApi;
       if(store.search !== ''){

@@ -19,13 +19,17 @@ export default {
         getPoster(path) {
             let imgPath = store.posterPath + path
             return imgPath
+        },
+        getStar(vote) {
+            let stars = vote.toFixed() / 2
+            return stars
         }
     },
 }
 </script>
 <template lang="">
    <main>
-    <div class="film" v-if="store.movies.length > 0">
+    <div class="film mt-3" v-if="store.movies.length > 0">
         <div class="container">
             <div class="row">
                 <div class="col-12 justify-content-center mb-3">
@@ -36,7 +40,13 @@ export default {
                     <h2> TITLE: {{ film.title }} </h2>
                     <h3> ORIGINAL: {{ film.original_title }} </h3>
                     <span :class="getFlag(film.original_language)"></span>
-                    <p> VOTE: {{ film.vote_average }} </p>
+                    <div>
+                        <i class="fas fa-star" :class="getStar(film.vote_average) >= 1 ? 'gold' : ''"></i>
+                        <i class="fas fa-star" :class="getStar(film.vote_average) >= 2 ? 'gold' : ''"></i>
+                        <i class="fas fa-star" :class="getStar(film.vote_average) >= 3 ? 'gold' : ''"></i>
+                        <i class="fas fa-star" :class="getStar(film.vote_average) >= 4 ? 'gold' : ''"></i>
+                        <i class="fas fa-star" :class="getStar(film.vote_average) == 5 ? 'gold' : ''"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,6 +84,12 @@ export default {
         }
         h3{
             color: white;
+        }
+        .fa-star {
+            color: white;
+        }
+        .gold {
+            color: gold;
         }
     }
 
