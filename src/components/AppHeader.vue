@@ -29,7 +29,7 @@ export default {
     @use '../styles/generals.scss';
 
     header {
-    background-color: black;
+    background-color: rgb(19, 19, 19);
     width: 100%;
     height: 75px;
     #search {
