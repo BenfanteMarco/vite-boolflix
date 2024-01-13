@@ -9,9 +9,9 @@ export default {
 }
 </script>
 <template lang="">
-    <div>
-        
-    </div>
+   <main>
+    
+   </main>
 </template>
 <style lang="scss" scoped>
     @use '../styles/generals.scss';
